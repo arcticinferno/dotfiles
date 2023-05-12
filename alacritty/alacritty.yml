@@ -1,0 +1,33 @@
+env:
+  TERM: alacritty
+  LANG: "en_US.UTF-8"
+  LC_CTYPE: en_US.UTF-8
+font:
+  normal:
+    family: "inconsolata"
+
+    style: Regular
+  size: 14.0
+colors:
+  primary:
+    background: '#181818'
+    foreground: '#f0f0f0'
+  normal:
+    black:   '#373737'
+    red:     '#f0294a'
+    green:   '#1cbf5e'
+    yellow:  '#f4d242'
+    blue:    '#4a9cf2'
+    magenta: '#e754e3'
+    cyan:    '#34aedb'
+    white:   '#c0c0c0'
+  bright:
+    black:   '#484848'
+    red:     '#ff5e5e'
+    green:   '#6efcbd'
+    yellow:  '#fff789'
+    blue:    '#89c3ff'
+    magenta: '#ff80f1'
+    cyan:    '#72d2f0'
+    white:   '#ffffff'
+

@@ -1,0 +1,18 @@
+Config { font = "Inconsolata Bold 17"
+       , bgColor = "#161616"
+       , fgColor = "#ffffff"
+       , position = TopSize L 100 40
+       , lowerOnStart = True
+       , commands = [ Run Network "enp3s0" ["-L","0","-H","32","--normal","#33b1ff","--high","#ee5396"] 10
+                    , Run Cpu ["-L","3","-H","50","--normal","#33b1ff","--high","#ee5396"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Swap [] 10
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run MPD ["-t", "<state>: <artist> - <title>", "--", "-h", "127.0.0.1", "-p", "6600"] 10
+                    , Run StdinReader
+                    ] 
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %StdinReader% } <fc=#ee5396>%mpd%</fc> { <fc=#33b1ff>%cpu%</fc> | <fc=#33b1ff>%memory%</fc> * <fc=#33b1ff>%swap%</fc> | <fc=#33b1ff>%enp3s0%</fc> | <fc=#33b1ff>%date%</fc> "
+       }
+
